@@ -37,11 +37,7 @@
         font-weight: 300;
     }
     &__cta{
-        display: inline-block;
-        background: $background-cta;
-        color: white;
-        font-weight: 500;
-        border-radius: 50px;
+        @include cta;
         padding: 15px 20px;
     }
 }

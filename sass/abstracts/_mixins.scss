@@ -3,3 +3,10 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin cta{
+    display: inline-block;
+    background: $background-cta;
+    font-weight: 500;
+    border-radius: 50px;
+}

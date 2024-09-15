@@ -94,7 +94,6 @@ ul {
 .presentation__cta {
   display: inline-block;
   background: linear-gradient(#FF79DA, #9356DC);
-  color: white;
   font-weight: 500;
   border-radius: 50px;
   padding: 15px 20px;
