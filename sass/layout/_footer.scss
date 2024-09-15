@@ -1,0 +1,17 @@
+.footer{
+    background-color: $background-color-second;
+    color: white;
+    padding: 30px;
+    &__title{
+        margin-bottom: 15px;
+    }
+    &__list--item{
+        margin-bottom: 10px;
+    }
+    .fa-utensils{
+        margin-right: 7px;
+    }
+    .fa-handshake-angle{
+        margin-right: 2px;
+    }
+}
