@@ -15,7 +15,13 @@ h1 {
 }
 
 h2 {
-  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 a {
@@ -94,6 +100,44 @@ ul {
   padding: 15px 20px;
 }
 
+.function {
+  padding: 40px 30px;
+}
+.function__title {
+  margin-bottom: 25px;
+}
+.function__container {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.function__container--box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+.function__container--info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.function__container--info .fa-solid {
+  font-size: 20px;
+  color: #353535;
+}
+
 .footer {
   background-color: #353535;
   color: white;
@@ -101,6 +145,8 @@ ul {
 }
 .footer__title {
   margin-bottom: 15px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 20px;
 }
 .footer__list--item {
   margin-bottom: 10px;

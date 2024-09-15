@@ -9,7 +9,13 @@ h1{
 }
 
 h2{
-    font-family: $title-font;
+    font-size: $font-size-title;
+    font-weight: 700;
+}
+
+h3{
+    font-weight: 500;
+    font-size: $font-size-text;
 }
 
 a{
