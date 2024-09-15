@@ -1,8 +1,9 @@
 .header{
-    display: flex;
-    justify-content: center;
-    padding: 30px 0 20px 0; // J'ai baissé le padding en bas, ajuster après l'ajout du form en fonction du résultat
-    img{
+    @include text-center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    &__img{
         width: 200px;
     }
 }

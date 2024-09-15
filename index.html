@@ -9,13 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- Lien icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header">
-        <img src="assets/images/logo/ohmyfood.png" alt="Logo Oh my food">
+        <img src="assets/images/logo/ohmyfood.png" alt="Logo ohmyfood" class="header__img">
     </header>
 
-    <main>
+    <main class="main-container">
+        <!-- Champ de recherche -->
+        <section class="form">
+            <form class="form__search">
+                <label for="search-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                </label>
+                <input type="search" class="form__search--input" id="search-location" value="Paris, Belleville">
+            </form>
+        </section>
+
+        <!-- Presentation -->
+        <section class="presentation">
+            <h1 class="presentation__title">Réservez le menu qui vous convient</h1>
+            <p class="presentation__texte">Découvrez des restaurant d'exception, sélectionnés par nos soins.</p>
+            <a href="#" class="presentation__cta">Explorez nos restaurants</a>
+        </section>
 
     </main>
 
