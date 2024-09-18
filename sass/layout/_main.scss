@@ -48,6 +48,7 @@
         margin-bottom: 25px;
     }
     &__container{
+        position: relative;
         padding: 30px;
         border-radius: 20px;
         background-color: $background-color;
@@ -56,9 +57,8 @@
         &--box{
             @include text-center;
             position: absolute;
-            left: 20px;
+            left: -10px;
             background-color: $primary-color;
-            color: white;
             border-radius: 50%;
             height: 30px;
             width: 30px;
@@ -69,6 +69,68 @@
             .fa-solid{
                 font-size: 20px;
                 color: $background-color-second;
+            }
+        }
+    }
+}
+
+.restaurant{
+    padding: 40px 30px; //Pour l'instant j'ai mis le même que pour function
+    background-color: $background-color;
+    &--title{
+        margin-bottom: 25px;
+    }
+    &__container{
+        @include text-center;
+        flex-wrap: wrap;
+        gap: 25px;
+        a{
+            width: 100%;
+        }
+        .card{
+            background-color: white;
+            border-radius: 20px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 180px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                object-fit: cover;
+            }
+            &--new{
+                color: #008766;
+                background-color: #99E2D0;
+                padding: 5px 10px;
+                border-radius: 2px;
+                position: absolute;
+                right: 13px;
+                top: 13px;
+            }
+            &__content{
+                display: flex;
+                justify-content: space-between;
+                padding: 15px;
+                padding-right: 30px;
+                &--txt{
+                    color: black;
+                    &--title{
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                    &--place{
+                        font-weight: 300;
+                    }
+                }
+                &--heart{
+                    display: flex;
+                    align-items: center;
+                    .fa-heart{
+                        color: black;
+                        font-weight: 300;
+                        font-size: 30px;
+                    } 
+                }
             }
         }
     }
