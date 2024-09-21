@@ -44,31 +44,45 @@
 
 .function{
     padding: 40px 30px;
+    @media (min-width: 1024px){
+        padding: 50px 180px;
+    }
     &__title{
         margin-bottom: 25px;
     }
     &__container{
-        position: relative;
-        padding: 30px;
-        border-radius: 20px;
-        background-color: $background-color;
-        @include text-center;
-        margin-bottom: 25px;
-        &--box{
-            @include text-center;
-            position: absolute;
-            left: -10px;
-            background-color: $primary-color;
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1024px){
+            flex-direction: row;
+            justify-content: space-between;
         }
-        &--info{
+        &__box{
+            position: relative;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: $background-color;
             @include text-center;
-            gap: 20px;
-            .fa-solid{
-                font-size: 20px;
-                color: $background-color-second;
+            margin-bottom: 25px;
+            @media (min-width: 1024px){
+                padding: 30px 60px;
+            }
+            &--num{
+                @include text-center;
+                position: absolute;
+                left: -10px;
+                background-color: $primary-color;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+            }
+            &--info{
+                @include text-center;
+                gap: 20px;
+                .fa-solid{
+                    font-size: 20px;
+                    color: $background-color-second;
+                }
             }
         }
     }
@@ -77,6 +91,9 @@
 .restaurant{
     padding: 40px 30px; 
     background-color: $background-color;
+    @media (min-width: 1024px){
+        padding: 50px 180px;
+    }
     &--title{
         margin-bottom: 25px;
     }
@@ -84,8 +101,16 @@
         @include text-center;
         flex-wrap: wrap;
         gap: 25px;
+        @media (min-width: 1024px){
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 50px;
+        }
         a{
             width: 100%;
+            @media (min-width: 1024px){
+                width: 45%;
+            }
         }
         .card{
             background-color: white;
