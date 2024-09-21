@@ -7,8 +7,11 @@
         font-family: $title-font;
         font-size: 20px;
     }
-    &__list--item{
+    &__list__item{
         margin-bottom: 10px;
+        &--white{
+            color: white;
+        }
     }
     .fa-utensils{
         margin-right: 7px;

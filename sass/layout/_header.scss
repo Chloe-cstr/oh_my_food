@@ -3,6 +3,15 @@
     padding-top: 30px;
     padding-bottom: 10px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    &__return{
+        position: absolute;
+        top: 35px;
+        left: 30px;
+        i{
+            font-size: 22px;
+        }
+    }
     &__img{
         width: 200px;
     }

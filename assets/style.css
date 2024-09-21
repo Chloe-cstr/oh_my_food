@@ -26,7 +26,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 ul {
@@ -45,6 +45,15 @@ span {
   padding-top: 30px;
   padding-bottom: 10px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.header__return {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+}
+.header__return i {
+  font-size: 22px;
 }
 .header__img {
   width: 200px;
@@ -98,6 +107,7 @@ span {
 .presentation__cta {
   display: inline-block;
   background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
   font-weight: 500;
   border-radius: 50px;
   padding: 15px 20px;
@@ -215,14 +225,91 @@ span {
   font-family: "Shrikhand", sans-serif;
   font-size: 20px;
 }
-.footer__list--item {
+.footer__list__item {
   margin-bottom: 10px;
+}
+.footer__list__item--white {
+  color: white;
 }
 .footer .fa-utensils {
   margin-right: 7px;
 }
 .footer .fa-handshake-angle {
   margin-right: 2px;
+}
+
+.main__img {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background-color: #EAEAEA;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+}
+.menu__restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.menu__restaurant__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+}
+.menu__restaurant .fa-heart {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.menu__starter {
+  margin-bottom: 40px;
+  width: 100%;
+}
+.menu__starter__title {
+  font-size: 17px;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 20px;
+}
+.menu__starter__title::before {
+  content: "";
+  position: absolute;
+  background-color: #99E2D0;
+  width: 45px;
+  height: 2px;
+  bottom: -5px;
+}
+.menu__starter__name {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.menu__starter__name--margin {
+  margin-bottom: 5px;
+}
+.menu__starter__name__description {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__starter__name__description--weight {
+  font-weight: 300;
+  font-size: 15px;
+}
+.menu__cta {
+  display: inline-block;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 15px 35px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
