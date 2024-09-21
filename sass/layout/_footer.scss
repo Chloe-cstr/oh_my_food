@@ -22,7 +22,9 @@
         }
         &__item{
             margin-bottom: 10px;
-            &--white{
+            &__lien{
+                display: flex;
+                gap: 5px;
                 color: white;
             }
         }

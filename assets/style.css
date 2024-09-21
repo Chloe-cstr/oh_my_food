@@ -310,7 +310,9 @@ span {
 .footer__list__item {
   margin-bottom: 10px;
 }
-.footer__list__item--white {
+.footer__list__item__lien {
+  display: flex;
+  gap: 5px;
   color: white;
 }
 .footer__list .fa-utensils {
