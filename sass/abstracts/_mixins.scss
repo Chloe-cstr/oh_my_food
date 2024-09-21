@@ -11,3 +11,19 @@
     font-weight: 500;
     border-radius: 50px;
 }
+
+@mixin heart{
+    font-size: $font-size-title;
+    margin-right: 10px;
+    color: black;
+    position: absolute;
+    top: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@mixin heart-solid{
+    opacity: 0;
+    background: $background-cta;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

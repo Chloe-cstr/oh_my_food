@@ -147,14 +147,28 @@
                         font-weight: 300;
                     }
                 }
-                &--heart{
+                &__heart{
                     display: flex;
                     align-items: center;
+                    &--icone{
+                        display: inline-block;
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                    }
                     .fa-heart{
-                        color: black;
-                        font-weight: 300;
-                        font-size: 30px;
-                    } 
+                        @include heart
+                    }
+                    .fa-solid{
+                        @include heart-solid
+                    }
+                }
+                &:hover .fa-regular{
+                    opacity: 0;
+                }
+                &:hover .fa-solid{
+                    opacity: 1;
                 }
             }
         }
