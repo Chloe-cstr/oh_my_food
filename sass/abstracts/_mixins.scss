@@ -4,12 +4,22 @@
     align-items: center;
 }
 
+@mixin shadow{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.421);
+}
+
+@mixin shadow-hover{
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+
+}
+
 @mixin cta{
     display: inline-block;
     background: $background-cta;
     color: white;
     font-weight: 500;
     border-radius: 50px;
+    transition: opacity 0.3s;
 }
 
 @mixin heart{
