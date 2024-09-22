@@ -424,6 +424,9 @@ span {
   border-radius: 15px;
   padding: 15px;
   margin-bottom: 10px;
+  position: relative;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 .menu__starter__name--margin {
   margin-bottom: 5px;
@@ -431,10 +434,35 @@ span {
 .menu__starter__name__description {
   display: flex;
   justify-content: space-between;
+  transition: margin-right 0.3s;
 }
 .menu__starter__name__description--weight {
   font-weight: 300;
   font-size: 15px;
+}
+.menu__starter__name:hover .menu__starter__check {
+  right: 0;
+}
+.menu__starter__name:hover .menu__starter__name__description {
+  margin-right: 80px;
+}
+.menu__starter__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 80px;
+  height: 100%;
+  top: 0;
+  right: -80px;
+  position: absolute;
+  transition: right 0.3s;
+}
+.menu__starter__check .fa-circle-check {
+  font-size: 25px;
+  color: white;
 }
 .menu__cta {
   display: inline-block;

@@ -76,18 +76,45 @@
             border-radius: 15px;
             padding: 15px;
             margin-bottom: 10px;
+            position: relative;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            overflow: hidden; // Permet de cacher le bloc avec l'icone
             &--margin{
                 margin-bottom: 5px;
             }
             &__description{
                 display: flex;
                 justify-content: space-between;
+                transition: margin-right 0.3s;
                 &--weight{
                     font-weight: 300;
                     font-size: 15px;
                 }
             }
+            &:hover .menu__starter__check{
+                right: 0;
+            }
+            &:hover .menu__starter__name__description{
+                margin-right: 80px;
+            }
         }
+        &__check{
+            @include text-center;
+            background-color : $tertiary-color;
+            border-top-right-radius : 15px;
+            border-bottom-right-radius : 15px;
+            width : 80px;
+            height: 100%;
+            top : 0;
+            right : -80px;
+            position : absolute;
+            transition: right 0.3s;
+            .fa-circle-check{
+                font-size: 25px;
+                color: white;
+            }
+        }
+
     }
     &__cta{
         @include cta;
