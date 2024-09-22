@@ -81,6 +81,7 @@
             overflow: hidden; // Permet de cacher le bloc avec l'icone
             &--margin{
                 margin-bottom: 5px;
+                @include crop;
             }
             &__description{
                 display: flex;
@@ -89,13 +90,18 @@
                 &--weight{
                     font-weight: 300;
                     font-size: 15px;
+                    @include crop;
+                    margin-right: 20px; //Permet de faire un espace entre les points de suspensions et le montant
                 }
             }
-            &:hover .menu__starter__check{
+            &:hover .menu__starter__check, &:focus .menu__starter__check{
                 right: 0;
             }
-            &:hover .menu__starter__name__description{
+            &:hover .menu__starter__name__description, &:focus .menu__starter__name__description{
                 margin-right: 80px;
+            }
+            &:hover .menu__starter__name--margin, &:focus .menu__starter__name--margin{
+                margin-right: 120px;
             }
         }
         &__check{

@@ -13,6 +13,12 @@
 
 }
 
+@mixin crop{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 @mixin cta{
     display: inline-block;
     background: $background-cta;

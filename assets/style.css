@@ -430,6 +430,9 @@ span {
 }
 .menu__starter__name--margin {
   margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__starter__name__description {
   display: flex;
@@ -439,12 +442,19 @@ span {
 .menu__starter__name__description--weight {
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 20px;
 }
-.menu__starter__name:hover .menu__starter__check {
+.menu__starter__name:hover .menu__starter__check, .menu__starter__name:focus .menu__starter__check {
   right: 0;
 }
-.menu__starter__name:hover .menu__starter__name__description {
+.menu__starter__name:hover .menu__starter__name__description, .menu__starter__name:focus .menu__starter__name__description {
   margin-right: 80px;
+}
+.menu__starter__name:hover .menu__starter__name--margin, .menu__starter__name:focus .menu__starter__name--margin {
+  margin-right: 120px;
 }
 .menu__starter__check {
   display: flex;
