@@ -54,8 +54,15 @@
     &__starter{
         margin-bottom: 40px;
         width: 100%;
+        overflow: hidden;
+        animation: apparition 1s backwards;
         @media (min-width: 1024px){
             padding: 0 200px;
+        }
+        @for $i from 2 through 4{
+            &:nth-child(#{$i}){
+                animation-delay: 300ms * $i;
+            }
         }
         &__title{
             font-size: $font-size-text;

@@ -13,42 +13,9 @@
   }
   
   /* Content hidden initially */
-  .main-container, .header, .footer {
+.main-container, .header-loader, .footer-loader {
     visibility: hidden;
     opacity: 0;
     animation: showContent 0s forwards 3s; /* Start after 3 seconds */
-  }
-  
-  /* Keyframes for loader spinning */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* Keyframes to hide the loader */
-  @keyframes hideLoader {
-    0% {
-      opacity: 1;
-      visibility: visible;
-    }
-    100% {
-      visibility: hidden;
-    }
-  }
-  
-  /* Keyframes to show the content */
-  @keyframes showContent {
-    0% {
-      visibility: hidden;
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
+}
   
