@@ -34,11 +34,11 @@
     color: black;
     position: absolute;
     top: 10px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 1s ease, transform 1s ease 1s;
 }
 
 @mixin heart-solid{
-    opacity: 0;
+    clip-path: inset(100% 0 0 0); 
     background: $background-cta;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

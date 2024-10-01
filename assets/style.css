@@ -208,18 +208,16 @@ span {
     gap: 50px;
   }
 }
-.restaurant__container a {
-  width: 100%;
-}
-@media (min-width: 1024px) {
-  .restaurant__container a {
-    width: 45%;
-  }
-}
 .restaurant__container .card {
   background-color: white;
   border-radius: 20px;
   position: relative;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .restaurant__container .card {
+    width: 45%;
+  }
 }
 .restaurant__container .card img {
   width: 100%;
@@ -264,11 +262,8 @@ span {
   height: 50px;
   cursor: pointer;
 }
-.restaurant__container .card__content__heart--icone:hover .fa-regular {
-  opacity: 0;
-}
 .restaurant__container .card__content__heart--icone:hover .fa-solid {
-  opacity: 1;
+  animation: heart 2s ease-in forwards;
 }
 .restaurant__container .card__content__heart .fa-heart {
   font-size: 30px;
@@ -276,10 +271,10 @@ span {
   color: black;
   position: absolute;
   top: 10px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 1s ease, transform 1s ease 1s;
 }
 .restaurant__container .card__content__heart .fa-solid {
-  opacity: 0;
+  clip-path: inset(100% 0 0 0);
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -376,11 +371,8 @@ span {
   height: 50px;
   cursor: pointer;
 }
-.menu__restaurant__heart:hover .fa-regular {
-  opacity: 0;
-}
 .menu__restaurant__heart:hover .fa-solid {
-  opacity: 1;
+  animation: heart 2s ease-in forwards;
 }
 .menu__restaurant .fa-heart {
   font-size: 30px;
@@ -388,10 +380,10 @@ span {
   color: black;
   position: absolute;
   top: 10px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 1s ease, transform 1s ease 1s;
 }
 .menu__restaurant .fa-solid {
-  opacity: 0;
+  clip-path: inset(100% 0 0 0);
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -399,7 +391,6 @@ span {
 .menu__starter {
   margin-bottom: 40px;
   width: 100%;
-  overflow: hidden;
   animation: apparition 1s backwards;
 }
 @media (min-width: 1024px) {
@@ -436,7 +427,6 @@ span {
   padding: 15px;
   margin-bottom: 10px;
   position: relative;
-  transition: background-color 0.3s, box-shadow 0.3s;
   overflow: hidden;
 }
 .menu__starter__name--margin {
@@ -458,13 +448,13 @@ span {
   white-space: nowrap;
   margin-right: 20px;
 }
-.menu__starter__name:hover .menu__starter__check, .menu__starter__name:focus .menu__starter__check {
+.menu__starter__name:hover .menu__starter__check {
   right: 0;
 }
-.menu__starter__name:hover .menu__starter__name__description, .menu__starter__name:focus .menu__starter__name__description {
+.menu__starter__name:hover .menu__starter__name__description {
   margin-right: 80px;
 }
-.menu__starter__name:hover .menu__starter__name--margin, .menu__starter__name:focus .menu__starter__name--margin {
+.menu__starter__name:hover .menu__starter__name--margin {
   margin-right: 120px;
 }
 .menu__starter__check {
@@ -476,9 +466,9 @@ span {
   border-bottom-right-radius: 15px;
   width: 80px;
   height: 100%;
+  position: absolute;
   top: 0;
   right: -80px;
-  position: absolute;
   transition: right 0.3s;
 }
 .menu__starter__check .fa-circle-check {
@@ -505,23 +495,29 @@ span {
   position: fixed;
   top: 50%;
   left: 45%;
-  transform: translate(-50%, -50%);
+  transform: translate(-45%, -50%);
   border: 8px solid #EAEAEA;
   border-top: 8px solid #9356DC;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite, hideLoader 3s forwards;
-  z-index: 1000; /* To ensure it stays on top */
 }
 
-/* Content hidden initially */
 .main-container, .header-loader, .footer-loader {
   visibility: hidden;
   opacity: 0;
   animation: showContent 0s forwards 3s; /* Start after 3 seconds */
 }
 
+@keyframes heart {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+  from {
+    clip-path: inset(100% 0 0 0);
+  }
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
