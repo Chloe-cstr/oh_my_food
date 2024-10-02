@@ -1,7 +1,15 @@
 body{
     font-family: $text-font;
     font-size: $font-size-text;
-    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    margin: 0; 
+}
+
+.body-container{
+    width: 100%;
+    max-width: 1480px;
+    box-sizing: border-box;
 }
 
 h1{
