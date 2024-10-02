@@ -7,6 +7,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
+  max-width: 1400px;
 }
 
 h1 {
@@ -263,7 +264,7 @@ span {
   cursor: pointer;
 }
 .restaurant__container .card__content__heart--icone:hover .fa-solid {
-  animation: heart 2s ease-in forwards;
+  animation: heart 0.8s ease-in forwards;
 }
 .restaurant__container .card__content__heart .fa-heart {
   font-size: 30px;
@@ -372,7 +373,7 @@ span {
   cursor: pointer;
 }
 .menu__restaurant__heart:hover .fa-solid {
-  animation: heart 2s ease-in forwards;
+  animation: heart 0.8s ease-in forwards;
 }
 .menu__restaurant .fa-heart {
   font-size: 30px;
