@@ -13,7 +13,6 @@
   
 .main-container, .header-loader, .footer-loader{
     visibility: hidden;
-    opacity: 0;
-    animation: showContent 0s forwards 3s; /* Start after 3 seconds */
+    animation: showContent 0s forwards 3s;
 }
   

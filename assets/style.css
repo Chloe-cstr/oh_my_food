@@ -280,7 +280,6 @@ span {
   color: black;
   position: absolute;
   top: 10px;
-  transition: opacity 1s ease, transform 1s ease 1s;
 }
 .restaurant__container .card__content__heart .fa-solid {
   clip-path: inset(100% 0 0 0);
@@ -389,7 +388,6 @@ span {
   color: black;
   position: absolute;
   top: 10px;
-  transition: opacity 1s ease, transform 1s ease 1s;
 }
 .menu__restaurant .fa-solid {
   clip-path: inset(100% 0 0 0);
@@ -515,16 +513,15 @@ span {
 
 .main-container, .header-loader, .footer-loader {
   visibility: hidden;
-  opacity: 0;
-  animation: showContent 0s forwards 3s; /* Start after 3 seconds */
+  animation: showContent 0s forwards 3s;
 }
 
 @keyframes heart {
-  to {
-    clip-path: inset(0 0 0 0);
-  }
   from {
     clip-path: inset(100% 0 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
 @keyframes spin {
@@ -546,10 +543,8 @@ span {
 @keyframes showContent {
   0% {
     visibility: hidden;
-    opacity: 0;
   }
   100% {
-    opacity: 1;
     visibility: visible;
   }
 }
