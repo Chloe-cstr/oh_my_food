@@ -26,7 +26,7 @@
 }
 
 .presentation{
-    background-color: $background-color;
+    background-color: $background-color-tertiary;
     @include text-center;
     flex-direction: column;
     gap: 25px;
@@ -61,12 +61,13 @@
         @media (min-width: 1024px){
             flex-direction: row;
             justify-content: space-between;
+            gap: 20px;
         }
         &__box{
             position: relative;
             padding: 30px;
             border-radius: 20px;
-            background-color: $background-color;
+            background-color: $background-color-tertiary;
             @include text-center;
             margin-bottom: 25px;
             @media (min-width: 1024px){
@@ -88,6 +89,9 @@
                     font-size: 20px;
                     color: $background-color-second;
                 }
+                .fa-store{
+                    color: $primary-color;
+                }
             }
         }
     }
@@ -95,7 +99,7 @@
 
 .restaurant{
     padding: 40px 30px; 
-    background-color: $background-color;
+    background-color: $background-color-tertiary;
     @media (min-width: 1024px){
         padding: 50px 180px;
     }
@@ -160,7 +164,7 @@
                         height: 50px;
                         cursor: pointer;
                         &:hover .fa-solid{
-                            animation: heart 0.8s ease-in forwards;
+                            clip-path: inset(0 0 0 0);
                         }
                     }
                     .fa-heart{
@@ -168,6 +172,7 @@
                     }
                     .fa-solid{
                         @include heart-solid;
+                        transition: clip-path 0.8s ease-in;
                     }
                 }
             }

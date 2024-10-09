@@ -105,7 +105,7 @@ span {
 }
 
 .presentation {
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,13 +152,14 @@ span {
   .function__container {
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
   }
 }
 .function__container__box {
   position: relative;
   padding: 30px;
   border-radius: 20px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,10 +191,13 @@ span {
   font-size: 20px;
   color: #353535;
 }
+.function__container__box--info .fa-store {
+  color: #9356DC;
+}
 
 .restaurant {
   padding: 40px 30px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
 }
 @media (min-width: 1024px) {
   .restaurant {
@@ -272,7 +276,7 @@ span {
   cursor: pointer;
 }
 .restaurant__container .card__content__heart--icone:hover .fa-solid {
-  animation: heart 0.8s ease-in forwards;
+  clip-path: inset(0 0 0 0);
 }
 .restaurant__container .card__content__heart .fa-heart {
   font-size: 30px;
@@ -286,6 +290,7 @@ span {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: clip-path 0.8s ease-in;
 }
 
 .footer, .footer-loader {
@@ -341,7 +346,7 @@ span {
   display: flex;
   flex-direction: column;
   padding: 40px 20px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   position: relative;
@@ -350,8 +355,9 @@ span {
 }
 @media (min-width: 1024px) {
   .menu {
-    margin: 0 180px;
-    margin-bottom: -50px;
+    width: 80%;
+    margin: 0 auto -50px;
+    max-width: 1200px;
   }
 }
 .menu__restaurant {
@@ -380,7 +386,7 @@ span {
   cursor: pointer;
 }
 .menu__restaurant__heart:hover .fa-solid {
-  animation: heart 0.8s ease-in forwards;
+  clip-path: inset(0 0 0 0);
 }
 .menu__restaurant .fa-heart {
   font-size: 30px;
@@ -394,6 +400,7 @@ span {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: clip-path 0.8s ease-in;
 }
 .menu__starter {
   margin-bottom: 40px;
@@ -403,6 +410,7 @@ span {
 @media (min-width: 1024px) {
   .menu__starter {
     padding: 0 200px;
+    width: 100%;
   }
 }
 .menu__starter:nth-child(2) {
@@ -435,6 +443,11 @@ span {
   margin-bottom: 10px;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .menu__starter__name {
+    width: 100%;
+  }
 }
 .menu__starter__name--margin {
   margin-bottom: 5px;
@@ -516,14 +529,6 @@ span {
   animation: showContent 0s forwards 3s;
 }
 
-@keyframes heart {
-  from {
-    clip-path: inset(100% 0 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

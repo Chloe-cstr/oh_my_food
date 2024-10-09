@@ -8,15 +8,16 @@
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
-    background-color: $background-color;
+    background-color: $background-color-tertiary;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     position: relative;
     top: -50px;
     margin-bottom: -50px; 
     @media (min-width: 1024px){
-        margin: 0 180px;
-        margin-bottom: -50px;
+        width: 80%;
+        margin: 0 auto -50px;
+        max-width: 1200px;
     }
     &__restaurant{
         display: flex;
@@ -38,7 +39,7 @@
             height: 50px;
             cursor: pointer;
             &:hover .fa-solid{
-                animation: heart 0.8s ease-in forwards;
+                clip-path: inset(0 0 0 0);
             }
         }     
         .fa-heart{
@@ -46,6 +47,7 @@
         }
         .fa-solid{
             @include heart-solid;
+            transition: clip-path 0.8s ease-in;
         }
     }
     &__starter{
@@ -54,6 +56,7 @@
         animation: apparition 1s backwards;
         @media (min-width: 1024px){
             padding: 0 200px;
+            width: 100%;
         }
         @for $i from 2 through 4{
             &:nth-child(#{$i}){
@@ -81,6 +84,10 @@
             margin-bottom: 10px;
             position: relative;      
             overflow: hidden; 
+            @media (min-width: 1024px){
+                width: 100%;
+                
+            }
             &--margin{
                 margin-bottom: 5px;
                 @include crop;
